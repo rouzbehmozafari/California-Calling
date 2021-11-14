@@ -9,6 +9,7 @@
 :root {
   --fSize: 80px;
   --fSize2: 100px;
+  --fsize3: 60px;
 }
 
 /* General Styles */
@@ -70,6 +71,9 @@ p {
 .hero .heroHead .heroHeading h1 + h1 {
   color: black;
   -webkit-text-stroke: 1px white;
+}
+
+.hero .heroHead .heroHeading .secH {
   margin-top: -40px;
 }
 
@@ -111,25 +115,224 @@ p {
   width: 40%;
 }
 
+.stuck {
+  position: relative;
+}
+
 .stuck img {
   width: 20%;
-  display: none;
+  position: absolute;
+}
+
+.stuck img:nth-of-type(1) {
+  width: 30%;
+  top: -5%;
+  right: 5%;
+}
+
+.stuck img:nth-of-type(2) {
+  width: 25%;
+  top: 18%;
+  left: 2%;
+}
+
+.stuck img:nth-of-type(3) {
+  width: 25%;
+  top: 40%;
+  right: 0;
+}
+
+.stuck img:nth-of-type(4) {
+  width: 25%;
+  top: 60%;
+  left: 15%;
+}
+
+.stuck img:nth-of-type(5) {
+  width: 25%;
+  bottom: 20%;
+  right: 10%;
+}
+
+.stuck img:nth-of-type(6) {
+  width: 25%;
+  bottom: 0%;
+  left: 0%;
+}
+
+.stuck img:nth-of-type(7) {
+  width: 30%;
+  bottom: -30%;
+  left: 50%;
 }
 
 .stuck h2 {
-  font-size: var(--fSize2);
+  font-size: var(--fsize3);
 }
 
 .stuck article {
   width: 40%;
-  margin: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30%;
 }
 
 .stuck > p {
   width: 40%;
   margin: 30%;
+  margin-top: 60%;
+}
+
+.goldenBear img, .twoA + img {
+  width: 30%;
+}
+
+.goldenBear, .poppy {
+  position: relative;
+}
+
+.goldenBear img, .poppy img {
+  position: absolute;
+}
+
+.goldenBear img:nth-of-type(1) {
+  width: 60%;
+  bottom: -15%;
+  left: 5%;
+}
+
+.goldenBear img:nth-of-type(2) {
+  width: 35%;
+  bottom: -5%;
+  right: 10%;
+}
+
+.twoA {
+  padding: 10% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.twoA article {
+  width: 50%;
+}
+
+.twoA article h2 {
+  font-size: var(--fsize3);
+}
+
+.twoA article p + p {
+  font-size: 15px;
+}
+
+.twoA article:first-child {
+  padding-bottom: 60%;
+}
+
+.poppy {
+  padding-top: 20%;
+}
+
+.poppy img:nth-of-type(2) {
+  width: 35%;
+  bottom: 0%;
+  left: 5%;
+}
+
+.poppy img:nth-of-type(1) {
+  width: 55%;
+  bottom: -5%;
+  right: 10%;
+}
+
+.poppy article {
+  padding-bottom: 70%;
 }
 
 /* Footer */
+footer {
+  position: relative;
+  margin-top: 20%;
+  padding: 10% 7% 5% 7%;
+  overflow: hidden;
+}
+
+footer article {
+  width: 50%;
+}
+
+footer article p + p {
+  font-size: 25px;
+}
+
+footer article a {
+  display: inline-block;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+footer .end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .end .organisations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 20%;
+}
+
+footer .end .organisations img {
+  width: 90px;
+  height: 50px;
+}
+
+footer .end .socials img {
+  width: 30px;
+}
+
+footer .skewTxt {
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  font-size: var(--fSize);
+  position: absolute;
+  top: 30%;
+  right: -30%;
+  height: 95px;
+}
+
+footer .skewTxt span {
+  color: black;
+}
+
 /* Media */
+@media screen and (max-width: 800px) {
+  :root {
+    --fSize: 30px;
+    --fSize2: 40px;
+    --fsize3: 20px;
+  }
+  .hero .heroHead .heroHeading .secH {
+    margin-top: -23px;
+  }
+  .hero .lastYear h2 {
+    z-index: 999;
+  }
+  .hero .lastYear p {
+    z-index: 999;
+  }
+  .hero .lastYear img {
+    position: absolute;
+    right: -5%;
+    bottom: -10%;
+    width: 40%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
