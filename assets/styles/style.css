@@ -232,6 +232,8 @@ p {
 
 .poppy {
   padding-top: 20%;
+  position: relative;
+  overflow: hidden;
 }
 
 .poppy img:nth-of-type(2) {
@@ -248,6 +250,38 @@ p {
 
 .poppy article {
   padding-bottom: 70%;
+}
+
+.poppy .cir {
+  position: absolute;
+  top: -5%;
+  z-index: -1;
+  right: -12%;
+  width: 30%;
+  -webkit-animation: rot 9s infinite linear;
+          animation: rot 9s infinite linear;
+}
+
+@-webkit-keyframes rot {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rot {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 /* Footer */
@@ -290,7 +324,7 @@ footer .end .organisations {
 
 footer .end .organisations img {
   width: 90px;
-  height: 50px;
+  height: 30px;
 }
 
 footer .end .socials img {
@@ -329,9 +363,8 @@ footer .skewTxt span {
     z-index: 999;
   }
   .hero .lastYear img {
-    position: absolute;
-    right: -5%;
-    bottom: -10%;
+    right: 5%;
+    bottom: 10%;
     width: 40%;
   }
 }

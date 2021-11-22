@@ -206,6 +206,8 @@ p {
 }
 .poppy {
     padding-top: 20%;
+    position: relative;
+    overflow: hidden;
     img:nth-of-type(2) {
         width: 35%;
         bottom: 0%;
@@ -220,8 +222,21 @@ p {
         padding-bottom: 70%;
 
     }
-}
+    .cir {
+        position: absolute;
+        top: -5%;
+        z-index: -1;
+        right: -12%;
+        width: 30%;
+        animation: rot 9s infinite linear  ;
+    }
 
+}
+@keyframes rot {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg);
+    }
+}
 /* Footer */
 footer {
     position: relative;
@@ -247,7 +262,7 @@ footer {
 
             img {
                 width: 90px;
-                height: 50px;
+                height: 30px;
             }
         }
         .socials {
@@ -298,9 +313,8 @@ footer {
             z-index: 999;
         }
         img {
-            position: absolute;
-            right: -5%;
-            bottom: -10%;
+            right: 5%;
+            bottom: 10%;
             width: 40%;
         }
     }
